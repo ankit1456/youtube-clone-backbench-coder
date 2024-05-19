@@ -1,0 +1,14 @@
+@import "../../sass/base.scss";
+
+.watchScreen__player {
+  height: 60vh;
+  background-color: hsl(226, 14%, 24%);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: $breakpoint-small) {
+  .watchScreen__player {
+    height: 35vh;
+  }
+}

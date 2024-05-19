@@ -1,0 +1,209 @@
+@import "../../sass/base";
+
+// .header {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 1rem 3rem;
+//   background-color: $black-light;
+//   height: 8vh;
+//   width: 100%;
+//   position: fixed;
+//   top: 0;
+
+//   z-index: 999;
+//   &__menu {
+//     display: none;
+//     cursor: pointer;
+//   }
+
+//   &__logo {
+//     display: flex;
+//     align-items: center;
+//     position: relative;
+
+//     img {
+//       width: 40px;
+//       height: 40px;
+//       object-fit: contain;
+//       display: block;
+//     }
+//     p {
+//       color: #fff;
+//       font-size: 1.6rem;
+//       font-weight: 600;
+//       margin-bottom: -0.09rem;
+//       margin-left: 0.2rem;
+//     }
+
+//     .india {
+//       position: absolute;
+//       top: 0.2rem;
+//       right: -0.9rem;
+//       font-size: 10px;
+//       font-weight: 200;
+//     }
+//   }
+
+//   &__form {
+//     flex: 0.6;
+//     display: flex;
+//     padding: 0.1rem;
+//     margin: 0 1rem;
+//     border-radius: 3px;
+//     border: 1.2px solid;
+//     background-color: $black-secondary;
+
+//     input {
+//       width: 100%;
+//       border: none;
+//       font-weight: 500;
+//       background: transparent;
+//       padding: 0.3rem;
+//       color: $text-color;
+//       outline: none;
+//     }
+//     button {
+//       padding: 0 1.25rem;
+//       color: $text-color;
+//       background-color: transparent;
+//       border: none;
+//     }
+//   }
+
+//   &__icons {
+//     flex: 0.15;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+
+//     img {
+//       border-radius: 50%;
+//       width: 35px;
+//       height: 35px;
+//       object-fit: cover;
+//       margin-left: 5px;
+//     }
+//   }
+// }
+
+// @media (max-width: $breakpoint-medium) {
+//   .header {
+//     padding-right: 0.5rem;
+//     &__icons {
+//       flex: 0.18;
+//     }
+//   }
+// }
+// @media (max-width: $breakpoint-small) {
+//   .header {
+//     padding: 1rem;
+//     padding-right: 0.1rem;
+//     &__form {
+//       flex: 0.8;
+//       height: 35px;
+//     }
+//     &__menu {
+//       display: block;
+//     }
+//     &__logo {
+//       display: none;
+//     }
+
+//     &__icons > *:not(img) {
+//       display: none;
+//     }
+//   }
+// }
+
+// !
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: $black-primary;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  z-index: 999;
+  &__menu {
+    display: none;
+  }
+  &__logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+  }
+
+  form {
+    flex: 0.6;
+    display: flex;
+    padding: 0.1rem;
+    margin: 0 1rem;
+    border-radius: 3px;
+    border: 1.2px solid;
+    background-color: $black-secondary;
+
+    input {
+      width: 100%;
+      border: none;
+      font-weight: 500;
+      background: transparent;
+      padding: 0.3rem;
+      color: $text-color;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 0 1.25rem;
+      color: $text-color;
+      background: transparent;
+      border: none;
+      &:focus {
+        border: none;
+      }
+    }
+  }
+
+  &__icons {
+    flex: 0.15;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .header {
+    padding: 1rem;
+
+    form {
+      flex: 1;
+    }
+
+    &__menu {
+      display: block;
+    }
+    &__logo {
+      display: none;
+    }
+
+    &__icons > *:not(img) {
+      display: none;
+    }
+  }
+}
