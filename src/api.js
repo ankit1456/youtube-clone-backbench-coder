@@ -1,9 +1,12 @@
 import axios from "axios";
 
 const request = axios.create({
-  baseURL: "https://youtube.googleapis.com/youtube/v3/",
+  baseURL: "https://youtube.googleapis.com/youtube/v3",
   params: {
-    key: "AIzaSyBBru0Xc_Ngwwcy-VR_duD57Hpzn1gZFVU",
+    key: "AIzaSyB_zPagsw9NMYrBT07Z6OTpGCRPXEuEhVY",
+  },
+  headers: {
+    Accept: "application/json,",
   },
 });
 

@@ -27,7 +27,7 @@ export const getPopularVideos = () => async (dispatch, getState) => {
     });
     const { data } = await request("/videos", {
       params: {
-        part: "snippet,contentDetails,statistics",
+        part: "snippet, contentDetails, statistics",
         chart: "mostPopular",
         regionCode: "IN",
         maxResults: 20,
@@ -170,7 +170,6 @@ export const getSubscribedChannels = () => async (dispatch, getState) => {
         part: "snippet,contentDetails",
         mine: true,
         maxResults: 10,
-        
       },
       headers: {
         Authorization: `Bearer ${getState().auth.accessToken}`,

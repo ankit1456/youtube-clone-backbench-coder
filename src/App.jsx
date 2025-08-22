@@ -11,7 +11,7 @@ import HomeScreen from "./screens/HomeScreen/Homescreen";
 import LoginScreen from "./screens/LoginScreen/Loginscreen";
 import SearchScreen from "./screens/SearchScreen";
 import SubscriptionsScreen from "./screens/SubscriptionScreen/SubscriptionsScreen";
-import Watchscreen from "./screens/WatchScreen/Watchscreen";
+import WatchScreen from "./screens/WatchScreen/WatchScreen";
 
 // eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
@@ -22,9 +22,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header handleToggleSidebar={handleToggleSidebar} />
-      <div className='app__container'>
+      <div className="app__container">
         <Sidebar handleToggleSidebar={handleToggleSidebar} sidebar={sidebar} />
-        <Container fluid className='app__main'>
+        <Container fluid className="app__main">
           {children}
         </Container>
       </div>
@@ -44,37 +44,37 @@ const App = () => {
 
   return (
     <Switch>
-      <Route exact path='/'>
+      <Route exact path="/">
         <Layout>
           <HomeScreen />
         </Layout>
       </Route>
 
-      <Route path='/auth'>
+      <Route path="/auth">
         <LoginScreen />
       </Route>
-      <Route path='/search/:query'>
+      <Route path="/search/:query">
         <Layout>
           <SearchScreen />
         </Layout>
       </Route>
-      <Route path='/watch/:id'>
+      <Route path="/watch/:id">
         <Layout>
-          <Watchscreen />
+          <WatchScreen />
         </Layout>
       </Route>
-      <Route path='/feed/subscriptions'>
+      <Route path="/feed/subscriptions">
         <Layout>
           <SubscriptionsScreen />
         </Layout>
       </Route>
-      <Route path='/channel/:channelId'>
+      <Route path="/channel/:channelId">
         <Layout>
           <ChannelScreen />
         </Layout>
       </Route>
       <Route>
-        <Redirect to='/' />
+        <Redirect to="/" />
       </Route>
     </Switch>
   );

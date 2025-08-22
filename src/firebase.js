@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBBru0Xc_Ngwwcy-VR_duD57Hpzn1gZFVU",
-  authDomain: "b-71f57.firebaseapp.com",
-  projectId: "b-71f57",
-  storageBucket: "b-71f57.appspot.com",
-  messagingSenderId: "254043059297",
-  appId: "1:254043059297:web:36d1bdadbcbfc1225de620",
-  measurementId: "G-GNNGJC8DEK",
+  apiKey: "AIzaSyB_zPagsw9NMYrBT07Z6OTpGCRPXEuEhVY",
+  authDomain: "clone-454007.firebaseapp.com",
+  projectId: "youtube-clone-454007",
+  storageBucket: "youtube-clone-454007.firebasestorage.app",
+  messagingSenderId: "917341093178",
+  appId: "1:917341093178:web:56e945da2cf4794e40a403",
+  measurementId: "G-P0VYMT4S9B",
 };
+
 const app = initializeApp(firebaseConfig);
 const auth = new getAuth();
 

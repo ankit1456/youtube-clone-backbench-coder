@@ -12,27 +12,30 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     align-items: center;
-
-    h1 {
-      font-weight: 800;
-    }
-    button {
-      padding: 0.6rem;
-      border: none;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-      justify-self: flex-end;
-      margin-top: 1rem;
-      font-size: 18px;
-      &:focus {
-        outline: none;
-      }
-    }
   }
-  img {
+  &__youtube-logo {
     width: 130px;
     height: 130px;
+    object-fit: contain;
+    margin-bottom: 2rem;
+  }
+  &__google-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: medium;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__google-logo {
+    width: 30px;
+    height: 30px;
     object-fit: contain;
   }
 }

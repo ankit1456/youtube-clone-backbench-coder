@@ -1,15 +1,15 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Comments from "../../components/comments/Comments";
-import VideoHorizontal from "./../../components/videoHorizontal/VideoHorizontal";
-import VideoMetaData from "./../../components/videoMetaData/VideoMetaData";
+import VideoHorizontal from "../../components/videoHorizontal/VideoHorizontal";
+import VideoMetaData from "../../components/videoMetaData/VideoMetaData";
 import {
   getRelatedVideos,
   getVideoById,
-} from "./../../redux/actions/videos.action";
+} from "../../redux/actions/videos.action";
 import "./_watchscreen.scss";
 
 const WatchScreen = () => {
@@ -35,14 +35,14 @@ const WatchScreen = () => {
         <title>{video?.snippet?.title}</title>
       </Helmet> */}
       <Col lg={8}>
-        <div className='watchScreen__player'>
+        <div className="watchScreen__player">
           <iframe
             src={`https://www.youtube.com/embed/${id}`}
-            frameBorder='0'
+            frameBorder="0"
             title={video?.snippet?.title}
             allowFullScreen
-            width='100%'
-            height='100%'
+            width="100%"
+            height="100%"
           ></iframe>
         </div>
         {!loading ? (
@@ -64,8 +64,8 @@ const WatchScreen = () => {
               <VideoHorizontal video={video} key={video.id.videoId} />
             ))
         ) : (
-          <SkeletonTheme color='#343a40' highlightColor='#3c4147'>
-            <Skeleton width='100%' height='130px' count={15} />
+          <SkeletonTheme color="#343a40" highlightColor="#3c4147">
+            <Skeleton width="100%" height="130px" count={15} />
           </SkeletonTheme>
         )}
       </Col>

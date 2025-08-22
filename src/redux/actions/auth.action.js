@@ -1,4 +1,3 @@
-
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebase";
 import {
@@ -20,12 +19,12 @@ export const login = () => async (dispatch) => {
     provider.addScope("https://www.googleapis.com/auth/youtube.force-ssl");
     // provider.addScope("https://www.googleapis.com/auth/youtube.readonly");
 
-    const result = await signInWithPopup(auth,provider);
+    const result = await signInWithPopup(auth, provider);
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const accessToken = credential?.accessToken;
     const profile = {
       name: result.user.displayName,
-      photoUrl:result.user.photoURL
+      photoUrl: result.user.photoURL,
     };
 
     sessionStorage.setItem("yt-access-token", accessToken);
